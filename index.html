@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Word Scramble Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- ✅ Defer ensures script runs after DOM is loaded -->
+  <script src="script.js" type="module" defer></script>
+
+</head>
+<body>
+  <div class="container">
+    <h2>Word Scramble Game</h2>
+
+    <!-- ✅ Level Selection Dropdown -->
+    <div class="level-select">
+      <label for="level">Choose Level:</label>
+      <select id="level">
+        <option value="easy">Easy (40s)</option>
+        <option value="medium" selected>Medium (30s)</option>
+        <option value="hard">Hard (20s)</option>
+      </select>
+    </div>
+
+    <div class="content">
+      <p class="word">addition</p>
+
+      <div class="details">
+        <p class="hint">Hint:</p>
+        <p class="time">Time left: <span><b>10</b></span></p>
+        <p class="level">Level: <span><b>1</b></span></p>
+        <p class="accuracy">Accuracy: <span><b>0%</b></span></p>
+      </div>
+
+      <input type="text" class="input" placeholder="Enter a valid word" />
+
+      <div class="buttons">
+        <button class="Refresh">Refresh</button>
+        <button class="checkword">Check Word</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ 🎉 Popup Modal -->
+  <div id="popup" class="popup" style="display: none;">
+    <div class="popup-content">
+      <h3>🎉 Congratulations!</h3>
+      <p>You unscrambled the word correctly!</p>
+      <button id="closePopup">OK</button>
+    </div>
+  </div>
+</body>
+</html>
